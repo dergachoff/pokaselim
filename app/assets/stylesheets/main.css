@@ -6,11 +6,26 @@ body {
 	color: white;
 }
 
-jumbo h1 {
-	margin: -10px;
+.jumbo h1 {
+	font-weight: 300;
+	font-size: 5em;
 }
 
 footer p {
 	color: #ddd;
 	font-size: 0.8em;
+	margin: 30px 0 0 0;
+}
+
+a.morelink, a.morelink:visited {
+	color: white;
+	text-decoration: none;
+	border-bottom: 3px dashed #ccc;
+	display: inline;
+	font-size: 2em;
+}
+
+a.morelink:hover {
+	background-color: white;
+	color: black;
 }

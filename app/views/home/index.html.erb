@@ -5,17 +5,34 @@
 
 <div id="instafeed"></div>
 
-<script type="text/javascript">
-    var feed = new Instafeed({
-    	clientId: 'a617578eb08e4050b8545b98d1ec4ccd',
-      get: 'tagged',
-      tagName: 'black',
-      sortBy: 'random',
-      limit: 60,
-    });
-    feed.run();
-</script>
+<div><a href="#" id="load-more" class="morelink">Bring More Memories</a></div>
 
 <footer>
-	<p>photos tagged with #pokaselim at instagram</p>
+	<p>photos tagged with <strong>#pokaselim</strong> at instagram<br>
+	created for the farewell party at 13.03.15</p>
 </footer>
+
+<script type="text/javascript">
+	var loadButton = document.getElementById('load-more');
+	var feed = new Instafeed({
+		clientId: 'a617578eb08e4050b8545b98d1ec4ccd',
+    get: 'tagged',
+    tagName: 'pokaselim',
+    limit: 10,
+	  // every time we load more, run this function
+	  after: function() {
+	    // disable button if no more results to load
+	    if (!this.hasNext()) {
+	      loadButton.remove()
+	    }
+	  },
+	});
+
+	// bind the load more button
+	loadButton.addEventListener('click', function() {
+	  feed.next();
+	});
+
+	// run our feed!
+	feed.run();
+</script>
