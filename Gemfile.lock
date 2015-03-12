@@ -70,6 +70,8 @@ GEM
       faraday_middleware (>= 0.8, < 0.10)
       hashie (>= 0.4.0)
       multi_json (~> 1.0, >= 1.0.3)
+    instagramjs-rails (0.3.1)
+      railties (>= 3.1)
     jbuilder (2.2.11)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -169,6 +171,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   instagram
+  instagramjs-rails
   jbuilder (~> 2.0)
   jquery-rails
   pg
