@@ -18,7 +18,7 @@
 		clientId: 'a617578eb08e4050b8545b98d1ec4ccd',
     get: 'tagged',
     tagName: 'pokaselim',
-    limit: 10,
+    limit: 20,
 	  // every time we load more, run this function
 	  after: function() {
 	    // disable button if no more results to load
@@ -35,4 +35,10 @@
 
 	// run our feed!
 	feed.run();
+</script>
+
+<script type="text/javascript">
+	setInterval(function() {
+    window.location.reload();
+  }, 300000); 
 </script>
